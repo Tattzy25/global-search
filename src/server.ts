@@ -92,6 +92,7 @@ const globalSearchCatalogInputSchema = z.object({
                   min: z.number().min(0).max(5).optional().describe("The minimum rating value (0–5 scale)."),
                   min_count: z.number().int().min(0).optional().describe("The minimum number of reviews.")
                 })
+                .optional()
             })
             .describe("Filter by variant rating. variant matches products with at least one variant whose rating meets the given thresholds. Set variant.min for the minimum rating value (0–5 scale) and variant.min_count for the minimum number of reviews.")
             .optional(),
